@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admad zadanie API</title>
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+        <div class="container-xl">
+            <div class="page-header">
+                <h1 class="page-title">Admad zadanie - OMDB API search</h1>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="title">Szukaj po tytule:</label>
+                        <input type="text" id="title" class="form-control" placeholder="Podaj tytuł" />
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" for="type">Wybierz typ:</label>
+                        <select id="type" class="form-select">
+                            <option value="movie">Film</option>
+                            <option value="series">Serial</option>
+                            <option value="episode">Epizod</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <button id="searchButton" class="btn btn-primary">Szukaj</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-3" id="resultsWrapper" style="display:none;">
+                <div class="card-header">
+                    <h3 class="card-title">Wyniki wyszukiwania</h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tytuł</th>
+                                <th>Rok</th>
+                                <th>Typ</th>
+                                <th>Plakat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/js/tabler.min.js"></script>
+    <script src="dist/main.js"></script>
+</body>
+</html>
